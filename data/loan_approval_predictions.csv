@@ -1,0 +1,855 @@
+loan_id,predictions
+1703,Not Approved
+1173,Approved
+308,Not Approved
+1322,Approved
+3271,Approved
+3539,Approved
+1522,Approved
+3399,Not Approved
+1402,Approved
+1829,Not Approved
+296,Not Approved
+2700,Approved
+471,Approved
+3055,Not Approved
+1123,Not Approved
+2357,Approved
+4242,Approved
+3839,Approved
+1130,Approved
+3642,Not Approved
+862,Approved
+1338,Not Approved
+3651,Not Approved
+290,Not Approved
+3181,Approved
+3876,Approved
+2411,Approved
+457,Approved
+555,Approved
+2905,Not Approved
+1189,Approved
+1116,Not Approved
+3402,Not Approved
+817,Approved
+2107,Not Approved
+96,Not Approved
+2917,Approved
+4063,Approved
+4000,Approved
+4119,Not Approved
+120,Not Approved
+2957,Approved
+2088,Approved
+1270,Approved
+3624,Approved
+2409,Approved
+1051,Approved
+166,Approved
+1702,Approved
+2530,Not Approved
+3489,Approved
+3490,Not Approved
+3469,Not Approved
+3551,Approved
+1293,Approved
+2254,Approved
+3908,Approved
+1064,Approved
+315,Not Approved
+2022,Approved
+2092,Approved
+3722,Approved
+978,Not Approved
+410,Not Approved
+2284,Not Approved
+1128,Approved
+589,Approved
+2164,Approved
+2077,Approved
+2821,Approved
+829,Approved
+2457,Approved
+576,Approved
+4234,Approved
+2575,Not Approved
+4202,Approved
+109,Not Approved
+2873,Approved
+490,Approved
+3253,Approved
+149,Not Approved
+2015,Not Approved
+1859,Not Approved
+438,Approved
+3318,Not Approved
+4076,Not Approved
+1480,Approved
+4013,Approved
+3012,Not Approved
+3781,Not Approved
+888,Approved
+1723,Not Approved
+3159,Approved
+3199,Not Approved
+270,Not Approved
+544,Approved
+1534,Not Approved
+2716,Approved
+1510,Approved
+1784,Approved
+1556,Approved
+1268,Not Approved
+1407,Approved
+3340,Not Approved
+3178,Not Approved
+1979,Approved
+2124,Not Approved
+2535,Approved
+3878,Approved
+511,Approved
+3565,Approved
+4268,Approved
+1739,Not Approved
+1038,Approved
+179,Not Approved
+1174,Approved
+1641,Approved
+184,Approved
+2856,Approved
+151,Approved
+734,Not Approved
+1047,Approved
+3904,Not Approved
+297,Not Approved
+8,Approved
+2144,Approved
+3985,Approved
+3226,Not Approved
+2678,Approved
+3966,Approved
+3200,Approved
+157,Not Approved
+2759,Approved
+907,Not Approved
+1566,Not Approved
+305,Approved
+3621,Approved
+150,Not Approved
+4232,Approved
+3820,Approved
+188,Approved
+831,Approved
+3212,Approved
+2293,Not Approved
+949,Not Approved
+238,Approved
+843,Not Approved
+274,Approved
+1487,Not Approved
+999,Approved
+3653,Approved
+2252,Approved
+655,Not Approved
+3519,Not Approved
+733,Approved
+84,Approved
+2249,Approved
+3631,Not Approved
+810,Approved
+175,Approved
+2182,Not Approved
+1476,Approved
+2639,Approved
+432,Approved
+3826,Not Approved
+1877,Approved
+787,Approved
+650,Approved
+4173,Not Approved
+2971,Approved
+3807,Approved
+2244,Not Approved
+4106,Approved
+800,Approved
+3613,Not Approved
+2858,Approved
+746,Approved
+3858,Not Approved
+4147,Approved
+3734,Not Approved
+2765,Not Approved
+3193,Approved
+2269,Not Approved
+506,Not Approved
+1235,Approved
+1653,Approved
+2213,Approved
+1578,Approved
+3917,Not Approved
+838,Approved
+1948,Approved
+4049,Not Approved
+1543,Not Approved
+2099,Not Approved
+2609,Approved
+3599,Approved
+2860,Not Approved
+2110,Approved
+3300,Approved
+1356,Approved
+4266,Not Approved
+1315,Not Approved
+3733,Not Approved
+1366,Not Approved
+70,Not Approved
+3626,Not Approved
+3542,Approved
+2574,Approved
+1973,Approved
+1474,Approved
+3714,Approved
+2659,Not Approved
+1055,Not Approved
+2390,Approved
+1538,Approved
+3961,Approved
+3280,Not Approved
+318,Approved
+196,Approved
+2091,Approved
+220,Approved
+3035,Approved
+414,Approved
+584,Not Approved
+144,Approved
+351,Approved
+3861,Approved
+2405,Approved
+1564,Approved
+3105,Approved
+4091,Not Approved
+309,Not Approved
+4161,Approved
+803,Not Approved
+4079,Approved
+4011,Approved
+1018,Approved
+3759,Approved
+3768,Not Approved
+790,Approved
+3472,Not Approved
+856,Not Approved
+1498,Approved
+3915,Approved
+314,Approved
+3483,Not Approved
+211,Not Approved
+2044,Not Approved
+1745,Not Approved
+3126,Approved
+17,Approved
+393,Approved
+205,Approved
+3932,Approved
+3057,Not Approved
+2299,Not Approved
+670,Not Approved
+755,Approved
+594,Not Approved
+2312,Approved
+3030,Approved
+366,Approved
+1569,Approved
+1024,Approved
+3504,Approved
+1831,Approved
+33,Approved
+2218,Not Approved
+3913,Not Approved
+1451,Approved
+893,Approved
+2240,Approved
+3605,Not Approved
+1616,Approved
+4045,Approved
+2063,Approved
+691,Approved
+2854,Not Approved
+1398,Approved
+2083,Approved
+4258,Not Approved
+3015,Not Approved
+2069,Approved
+3685,Approved
+254,Not Approved
+2742,Approved
+3659,Approved
+3161,Not Approved
+1222,Not Approved
+561,Approved
+2157,Approved
+2377,Approved
+2503,Not Approved
+798,Approved
+2179,Not Approved
+2648,Approved
+3809,Approved
+2636,Not Approved
+3862,Not Approved
+93,Not Approved
+497,Not Approved
+2684,Not Approved
+2168,Approved
+1210,Approved
+908,Not Approved
+298,Approved
+1334,Approved
+1412,Approved
+3967,Approved
+3079,Approved
+2484,Approved
+4062,Approved
+1479,Approved
+3521,Approved
+2334,Approved
+4090,Approved
+3754,Approved
+3307,Approved
+759,Not Approved
+3938,Approved
+4253,Approved
+1448,Approved
+621,Approved
+1554,Approved
+4121,Approved
+1020,Not Approved
+461,Approved
+3796,Not Approved
+69,Not Approved
+1770,Not Approved
+2634,Approved
+1417,Not Approved
+3487,Approved
+1808,Approved
+1344,Approved
+2579,Not Approved
+3907,Not Approved
+1778,Approved
+721,Approved
+1260,Approved
+1041,Approved
+3195,Approved
+3439,Approved
+598,Approved
+1557,Approved
+3620,Not Approved
+3334,Not Approved
+1612,Approved
+2288,Approved
+2194,Not Approved
+61,Approved
+568,Approved
+494,Not Approved
+705,Not Approved
+809,Approved
+2758,Approved
+1330,Approved
+14,Not Approved
+1204,Not Approved
+1455,Not Approved
+538,Approved
+3523,Not Approved
+1938,Approved
+4149,Approved
+3467,Not Approved
+3859,Not Approved
+3306,Not Approved
+2228,Approved
+2570,Approved
+2512,Approved
+2704,Approved
+3429,Not Approved
+676,Approved
+468,Not Approved
+4122,Not Approved
+1361,Not Approved
+51,Not Approved
+1957,Not Approved
+2630,Approved
+3540,Approved
+2283,Approved
+3346,Not Approved
+1533,Approved
+958,Not Approved
+3832,Approved
+3745,Approved
+3127,Approved
+3481,Approved
+2216,Approved
+1482,Approved
+2561,Not Approved
+2387,Approved
+1537,Approved
+1374,Approved
+3713,Approved
+1606,Not Approved
+731,Approved
+287,Not Approved
+1717,Approved
+3203,Approved
+2450,Not Approved
+2323,Approved
+132,Not Approved
+463,Approved
+2127,Approved
+1225,Approved
+2577,Not Approved
+4050,Not Approved
+551,Approved
+937,Approved
+2619,Not Approved
+720,Approved
+2545,Approved
+2623,Approved
+1309,Approved
+2548,Not Approved
+1551,Not Approved
+1032,Not Approved
+1149,Not Approved
+4165,Approved
+3026,Approved
+3571,Not Approved
+4038,Not Approved
+3666,Approved
+3166,Approved
+1830,Approved
+330,Not Approved
+2436,Approved
+1213,Approved
+2605,Approved
+1618,Not Approved
+134,Approved
+2114,Approved
+1323,Approved
+3681,Not Approved
+2689,Not Approved
+3697,Not Approved
+683,Not Approved
+3716,Approved
+2775,Approved
+1175,Not Approved
+2696,Approved
+3400,Approved
+32,Not Approved
+4247,Approved
+3458,Approved
+2702,Approved
+1902,Approved
+1075,Approved
+2755,Approved
+2210,Not Approved
+1499,Approved
+2354,Not Approved
+2784,Approved
+2920,Approved
+3956,Approved
+1044,Approved
+2292,Approved
+1780,Approved
+2138,Approved
+1444,Approved
+1170,Approved
+879,Not Approved
+4001,Not Approved
+3227,Approved
+1029,Approved
+229,Not Approved
+3517,Not Approved
+3076,Not Approved
+3827,Not Approved
+718,Approved
+1477,Approved
+170,Approved
+1714,Not Approved
+23,Approved
+371,Approved
+2879,Not Approved
+2834,Not Approved
+4164,Approved
+3355,Approved
+620,Approved
+3575,Approved
+408,Not Approved
+2515,Approved
+1313,Approved
+2970,Approved
+1874,Approved
+1188,Approved
+2764,Not Approved
+915,Approved
+1807,Approved
+3658,Not Approved
+751,Not Approved
+505,Approved
+45,Not Approved
+596,Approved
+1882,Not Approved
+1187,Not Approved
+43,Not Approved
+3418,Approved
+2582,Approved
+2615,Approved
+2456,Approved
+2023,Not Approved
+2857,Approved
+530,Approved
+4254,Not Approved
+3906,Approved
+251,Approved
+2170,Approved
+2813,Not Approved
+3339,Approved
+1814,Not Approved
+3895,Not Approved
+1589,Not Approved
+325,Approved
+2452,Approved
+2603,Approved
+2534,Approved
+3168,Not Approved
+3812,Approved
+3818,Approved
+3891,Approved
+2348,Not Approved
+2404,Approved
+1513,Approved
+602,Approved
+99,Not Approved
+3918,Approved
+2707,Approved
+3563,Approved
+1777,Approved
+1580,Approved
+2066,Approved
+495,Approved
+3224,Not Approved
+3528,Approved
+2929,Not Approved
+501,Not Approved
+2442,Approved
+2650,Approved
+3949,Not Approved
+794,Approved
+871,Approved
+3478,Not Approved
+3417,Approved
+2941,Approved
+3231,Approved
+2211,Not Approved
+599,Approved
+174,Not Approved
+217,Approved
+3022,Approved
+1431,Approved
+1572,Approved
+1397,Not Approved
+1321,Approved
+3844,Approved
+744,Not Approved
+2882,Not Approved
+2028,Approved
+1422,Approved
+156,Approved
+3257,Approved
+3911,Not Approved
+4193,Not Approved
+3602,Approved
+1512,Not Approved
+3544,Approved
+95,Not Approved
+1732,Not Approved
+240,Approved
+1042,Approved
+1299,Not Approved
+642,Approved
+2952,Not Approved
+618,Approved
+3148,Not Approved
+465,Approved
+2855,Approved
+897,Approved
+3833,Not Approved
+802,Approved
+2370,Approved
+2985,Approved
+1760,Not Approved
+605,Approved
+3317,Not Approved
+177,Not Approved
+2631,Approved
+1623,Approved
+4169,Approved
+2378,Not Approved
+4096,Approved
+2498,Approved
+4036,Approved
+73,Approved
+2183,Not Approved
+3687,Approved
+4155,Not Approved
+2514,Not Approved
+3669,Approved
+3889,Approved
+2686,Not Approved
+4007,Approved
+52,Approved
+402,Approved
+2804,Approved
+436,Approved
+1434,Not Approved
+3077,Approved
+564,Approved
+4222,Not Approved
+26,Approved
+1885,Approved
+214,Approved
+881,Not Approved
+2295,Approved
+960,Not Approved
+2423,Not Approved
+3337,Not Approved
+2496,Approved
+693,Approved
+4136,Approved
+1904,Approved
+321,Approved
+1157,Approved
+3228,Not Approved
+2289,Approved
+1468,Approved
+889,Not Approved
+4205,Approved
+527,Approved
+643,Approved
+122,Approved
+1502,Not Approved
+3024,Approved
+44,Approved
+3321,Not Approved
+2668,Approved
+2117,Approved
+354,Not Approved
+869,Approved
+3511,Approved
+2817,Approved
+3785,Approved
+1340,Approved
+3310,Approved
+534,Not Approved
+1898,Approved
+680,Approved
+2594,Approved
+256,Approved
+903,Approved
+1886,Not Approved
+2276,Approved
+3867,Approved
+3229,Not Approved
+2121,Approved
+2647,Approved
+1747,Not Approved
+807,Approved
+2754,Approved
+291,Not Approved
+2934,Not Approved
+3925,Approved
+1582,Not Approved
+811,Approved
+3370,Approved
+1610,Approved
+2102,Approved
+263,Not Approved
+3207,Approved
+1652,Approved
+3021,Not Approved
+2189,Not Approved
+56,Not Approved
+1106,Approved
+1411,Approved
+1945,Not Approved
+1052,Not Approved
+1803,Approved
+3811,Approved
+1609,Not Approved
+1104,Approved
+1532,Approved
+682,Approved
+2431,Approved
+3107,Not Approved
+2846,Approved
+1941,Not Approved
+1833,Not Approved
+1001,Approved
+12,Not Approved
+3084,Approved
+322,Approved
+3201,Not Approved
+1697,Not Approved
+3292,Approved
+2002,Approved
+3608,Not Approved
+3443,Not Approved
+3293,Approved
+3049,Not Approved
+1615,Not Approved
+1159,Approved
+764,Not Approved
+4056,Not Approved
+690,Approved
+4093,Approved
+1850,Approved
+1003,Not Approved
+1426,Not Approved
+3920,Approved
+2552,Not Approved
+416,Not Approved
+2298,Approved
+2398,Not Approved
+227,Approved
+2178,Approved
+969,Not Approved
+3085,Not Approved
+3780,Approved
+1370,Not Approved
+2868,Approved
+4138,Not Approved
+2533,Approved
+3312,Approved
+4206,Approved
+3901,Approved
+183,Approved
+1627,Approved
+1192,Approved
+486,Approved
+1146,Approved
+2955,Not Approved
+1767,Approved
+139,Not Approved
+3569,Not Approved
+2330,Approved
+266,Approved
+2416,Not Approved
+3579,Not Approved
+63,Approved
+1094,Not Approved
+1257,Approved
+1228,Approved
+2651,Not Approved
+2029,Not Approved
+2698,Not Approved
+1822,Not Approved
+1550,Not Approved
+1738,Approved
+1278,Approved
+4041,Not Approved
+4034,Approved
+1178,Approved
+3493,Approved
+2093,Not Approved
+2921,Not Approved
+2351,Approved
+3426,Not Approved
+4148,Approved
+279,Not Approved
+1788,Approved
+3442,Approved
+1666,Approved
+358,Not Approved
+3154,Not Approved
+299,Approved
+2104,Not Approved
+1292,Approved
+2285,Approved
+2628,Approved
+761,Approved
+3978,Approved
+1393,Approved
+415,Not Approved
+2005,Approved
+3082,Approved
+2825,Approved
+4241,Approved
+2770,Approved
+3406,Approved
+1962,Not Approved
+2171,Not Approved
+2135,Approved
+3351,Not Approved
+1255,Approved
+3744,Approved
+4140,Approved
+3163,Approved
+1419,Not Approved
+3396,Not Approved
+2507,Not Approved
+58,Not Approved
+76,Approved
+1113,Not Approved
+368,Approved
+1162,Approved
+785,Approved
+4257,Not Approved
+1721,Approved
+4260,Approved
+2319,Approved
+1161,Not Approved
+2587,Approved
+3848,Approved
+1221,Approved
+1598,Not Approved
+2673,Approved
+1456,Not Approved
+2669,Not Approved
+124,Approved
+3088,Not Approved
+1110,Approved
+1812,Approved
+2517,Not Approved
+1022,Approved
+429,Approved
+2829,Approved
+665,Not Approved
+1056,Not Approved
+4208,Approved
+3112,Approved
+2536,Approved
+442,Approved
+1017,Not Approved
+1288,Approved
+433,Approved
+1929,Not Approved
+387,Not Approved
+30,Not Approved
+857,Approved
+1237,Approved
+203,Not Approved
+4171,Approved
+1539,Not Approved
+2499,Approved
+4190,Not Approved
+324,Approved
+2767,Approved
+805,Approved
+3463,Approved
+1744,Approved
+2215,Approved
+2972,Not Approved
+478,Approved
+426,Not Approved
+912,Approved
+443,Approved
+1483,Approved
+668,Not Approved
+1114,Not Approved

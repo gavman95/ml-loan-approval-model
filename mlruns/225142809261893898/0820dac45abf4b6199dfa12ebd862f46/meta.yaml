@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/gavi.vignes/Downloads/mlopsbootcamp/mlruns/225142809261893898/0820dac45abf4b6199dfa12ebd862f46/artifacts
+end_time: 1776726573332
+entry_point_name: ''
+experiment_id: '225142809261893898'
+lifecycle_stage: active
+run_id: 0820dac45abf4b6199dfa12ebd862f46
+run_name: LogisticRegression
+run_uuid: 0820dac45abf4b6199dfa12ebd862f46
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1776726573321
+status: 4
+tags: []
+user_id: gavi.vignes
