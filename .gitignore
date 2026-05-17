@@ -1,0 +1,59 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Packaging / build
+build/
+dist/
+*.egg-info/
+*.egg
+
+# MLflow (local experiment tracking)
+mlruns/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Tests / coverage
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+
+# Type checkers / linters (if you add them)
+.mypy_cache/
+.ruff_cache/
+.dmypy.json
+
+# Environment & secrets — never commit real credentials
+.env
+.env.*
+!.env.example
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors (remove a line if your team commits shared settings)
+.idea/
+# .vscode/
+
+# Optional: large/binary artifacts — uncomment if you store these elsewhere (e.g. DVC, S3)
+# *.pkl
+# *.joblib
+# *.h5
+# *.pt
+# *.pth
+# *.onnx
+# wandb/

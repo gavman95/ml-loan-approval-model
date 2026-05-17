@@ -19,5 +19,26 @@ dependencies = [
 
 [dependency-groups]
 dev = [
+    "mypy>=1.14.1",
     "pytest>=8.3.5",
+    "ruff>=0.15.13"
+
 ]
+
+[tool.mypy]
+python_version = "3.11"
+files = ["src", "constants"]
+explicit_package_bases = true
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module = "src.ModelTraining"
+disable_error_code = ["assignment"]
+
+[[tool.mypy.overrides]]
+module = "src.ModelPredictions"
+disable_error_code = ["call-arg"]
+
+[[tool.mypy.overrides]]
+module = "src.streamlit_app.*"
+disable_error_code = ["import-untyped"]
