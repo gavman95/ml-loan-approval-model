@@ -13,6 +13,7 @@ from src.ModelPredictions import model_predictions_pipeline
 
 app = FastAPI()
 
+
 # Pydantic model for the input data
 class LoanApplication(BaseModel):
     no_of_dependents: int
@@ -27,15 +28,14 @@ class LoanApplication(BaseModel):
     luxury_assets_value: int
     bank_asset_value: int
 
+
 @app.post("/predict")
 def predict(loan: LoanApplication):
     df = pd.DataFrame([loan.model_dump()])
 
     model = model_predictions_pipeline(df)
 
-    return {
-        "predictions": model.predictions_labels.tolist()
-    }
+    return {"predictions": model.predictions_labels.tolist()}
 
 
 if __name__ == "__main__":

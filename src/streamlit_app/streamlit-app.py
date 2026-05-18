@@ -18,8 +18,5 @@ data = {
 }
 
 if st.button("Predict"):
-    response = requests.post(
-        "http://127.0.0.1:8000/predict",
-        json=data
-    )
+    response = requests.post("http://127.0.0.1:8000/predict", json=data)
     st.write(response.json())
