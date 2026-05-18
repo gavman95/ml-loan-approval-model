@@ -2,16 +2,14 @@
 Module for FastAPI app
 """
 
-import logging
-import os
 import uvicorn
 import pandas as pd
-from fastapi import FastAPI, Depends, HTTPException
-from fastapi.middleware.cors import CORSMiddleware
-from pydantic import BaseModel, ConfigDict
+from fastapi import FastAPI
+from pydantic import BaseModel
 from src.ModelPredictions import model_predictions_pipeline
 
 app = FastAPI()
+
 
 # Pydantic model for the input data
 class LoanApplication(BaseModel):
@@ -27,15 +25,14 @@ class LoanApplication(BaseModel):
     luxury_assets_value: int
     bank_asset_value: int
 
+
 @app.post("/predict")
 def predict(loan: LoanApplication):
     df = pd.DataFrame([loan.model_dump()])
 
     model = model_predictions_pipeline(df)
 
-    return {
-        "predictions": model.predictions_labels.tolist()
-    }
+    return {"predictions": model.predictions_labels.tolist()}
 
 
 if __name__ == "__main__":
