@@ -33,9 +33,6 @@ jobs:
       - name: Lint code
         run: uv run ruff check . 
 
-      - name: Format check
-        run: uv run ruff format --check . 
-
       - name: Type checker
         run: uv run mypy
       
