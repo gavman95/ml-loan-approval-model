@@ -1,6 +1,6 @@
-artifact_location: mlflow-artifacts:/0
-creation_time: 1776722793555
+artifact_location: file:///Users/gavivignes/Downloads/mlopsbootcamp/mlruns/0
+creation_time: 1779126422344
 experiment_id: '0'
-last_update_time: 1776722793555
+last_update_time: 1779126422344
 lifecycle_stage: active
 name: Default
