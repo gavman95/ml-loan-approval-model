@@ -1,14 +1,9 @@
 import pandas as pd
 import numpy as np
-import joblib
-from pathlib import Path
-import os
-import sys
 from src.DataPreprocessing import DataLoader
-from constants.constants import TEST_FILE, MODEL_PATH, PREDICTIONS_PATH
+from constants.constants import MODEL_PATH
 from sklearn.metrics import accuracy_score, confusion_matrix, classification_report
 import mlflow
-from typing import Optional
 
 
 class ModelPredictions(DataLoader):

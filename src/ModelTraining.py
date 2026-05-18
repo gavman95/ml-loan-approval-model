@@ -6,13 +6,11 @@ from src.DataPreprocessing import DataLoader
 import joblib
 from constants.constants import FILE_NAME, MODEL_PATH
 import mlflow
-import os
 from sklearn.metrics import (
     accuracy_score,
     precision_score,
     recall_score,
     f1_score,
-    roc_auc_score,
     confusion_matrix,
 )
 import matplotlib.pyplot as plt
