@@ -32,7 +32,7 @@ def predict(loan: LoanApplication):
 
     model = model_predictions_pipeline(df)
 
-    return {"predictions": model.predictions_labels.tolist()}
+    return {"Your loan has been": model.predictions_labels.tolist()}
 
 
 if __name__ == "__main__":

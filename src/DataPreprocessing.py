@@ -4,7 +4,6 @@ import pandas as pd
 import numpy as np
 
 
-
 class DataLoader:
     def __init__(self, file_path: str):
         self.data_path = file_path
