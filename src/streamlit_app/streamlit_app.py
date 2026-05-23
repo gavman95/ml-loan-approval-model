@@ -1,5 +1,6 @@
 import streamlit as st
 import requests
+import os
 
 st.title("Loan Approval Predictor")
 
@@ -17,6 +18,8 @@ data = {
     "bank_asset_value": st.number_input("Bank Assets"),
 }
 
+API_URL = os.getenv("BACKEND_API_URL")
+
 if st.button("Predict"):
-    response = requests.post("http://127.0.0.1:8000/predict", json=data)
+    response = requests.post(API_URL, json=data)
     st.write(response.json())

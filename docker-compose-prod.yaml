@@ -1,0 +1,52 @@
+
+services:
+
+  loan-api:
+    image: <AWS_ACCOUNT_ID>.dkr.ecr.<REGION>.amazonaws.com/loan-api:latest
+    container_name: loan_api
+    restart: unless-stopped
+
+    expose:
+      - "8000"
+
+    environment:
+      ENV_MODE: production
+      AWS_REGION: us-east-1
+      S3_BUCKET_NAME: your-bucket-name
+
+    command: >
+      uvicorn src.fast_app.fast_app:app
+      --host 0.0.0.0
+      --port 8000
+      --workers 2
+
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+
+  loan-frontend:
+    image: <AWS_ACCOUNT_ID>.dkr.ecr.<REGION>.amazonaws.com/loan-frontend:latest
+    container_name: loan_frontend
+    restart: unless-stopped
+
+    ports:
+      - "8501:8501"
+
+    environment:
+      BACKEND_API_URL: http://loan-api:8000/predict
+
+    depends_on:
+      - loan-api
+
+    command: >
+      uv run streamlit run src/streamlit_app/streamlit_app.py
+      --server.port 8501
+      --server.address 0.0.0.0
+
+
+networks:
+  default:
+    driver: bridge

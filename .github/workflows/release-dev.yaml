@@ -1,0 +1,136 @@
+name: Deploy To Production
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+  id-token: write
+
+env:
+  AWS_REGION: ca-central-1
+  ECR_REPOSITORY: mlopsbootcamp-app
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+
+      # ----------------------------------------------------
+      # Checkout repository
+      # ----------------------------------------------------
+      - uses: actions/checkout@v4
+
+      # ----------------------------------------------------
+      # Configure AWS Credentials
+      # ----------------------------------------------------
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ env.AWS_REGION }}
+
+      # ----------------------------------------------------
+      # Login to Amazon ECR
+      # ----------------------------------------------------
+      - name: Login to Amazon ECR
+        uses: aws-actions/amazon-ecr-login@v2
+
+      # ----------------------------------------------------
+      # Set image tag
+      # ----------------------------------------------------
+      - name: Set IMAGE_TAG
+        run: |
+          echo "IMAGE_TAG=${GITHUB_SHA}" >> $GITHUB_ENV
+
+      # ----------------------------------------------------
+      # Build Docker image
+      # ----------------------------------------------------
+      - name: Build Docker image
+        run: |
+          docker build \
+            -t $ECR_REPOSITORY:${IMAGE_TAG} .
+
+      # ----------------------------------------------------
+      # Tag Docker image
+      # ----------------------------------------------------
+      - name: Tag Docker image
+        run: |
+          docker tag \
+            $ECR_REPOSITORY:${IMAGE_TAG} \
+            ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${AWS_REGION}.amazonaws.com/$ECR_REPOSITORY:${IMAGE_TAG}
+
+      # ----------------------------------------------------
+      # Push Docker image to ECR
+      # ----------------------------------------------------
+      - name: Push Docker image
+        run: |
+          docker push \
+            ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${AWS_REGION}.amazonaws.com/$ECR_REPOSITORY:${IMAGE_TAG}
+
+      # ----------------------------------------------------
+      # Deploy to EC2 via SSM
+      # ----------------------------------------------------
+      - name: Deploy to EC2
+        run: |
+
+          ECR_URI="${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${AWS_REGION}.amazonaws.com"
+
+          COMMAND_ID=$(aws ssm send-command \
+            --instance-ids "${{ secrets.EC2_INSTANCE_ID }}" \
+            --document-name "AWS-RunShellScript" \
+            --comment "Deploy production application" \
+            --parameters "commands=[
+              \"cd /home/ubuntu/app\",
+              \"export IMAGE_TAG=${IMAGE_TAG}\",
+              \"export ECR_URI=${ECR_URI}\",
+              \"export AWS_REGION=${AWS_REGION}\",
+              \"export S3_BUCKET_NAME=${{ secrets.S3_BUCKET_NAME }}\",
+              \"aws ecr get-login-password --region ${AWS_REGION} | docker login --username AWS --password-stdin ${ECR_URI}\",
+              \"docker compose -f docker-compose.prod.yml pull\",
+              \"docker compose -f docker-compose.prod.yml up -d --remove-orphans\"
+            ]" \
+            --query "Command.CommandId" \
+            --output text)
+
+          echo "Deployment Command ID: $COMMAND_ID"
+
+          sleep 5
+
+          for i in $(seq 1 30); do
+            sleep 10
+
+            STATUS=$(aws ssm get-command-invocation \
+              --command-id "$COMMAND_ID" \
+              --instance-id "${{ secrets.EC2_INSTANCE_ID }}" \
+              --query "Status" \
+              --output text 2>/dev/null || echo "Pending")
+
+            echo "Attempt $i/30 - Status: $STATUS"
+
+            if [ "$STATUS" = "Success" ]; then
+              echo "Deployment completed successfully"
+              exit 0
+
+            elif [ "$STATUS" = "Failed" ] || \
+                 [ "$STATUS" = "Cancelled" ] || \
+                 [ "$STATUS" = "TimedOut" ]; then
+
+              echo "Deployment failed"
+
+              aws ssm get-command-invocation \
+                --command-id "$COMMAND_ID" \
+                --instance-id "${{ secrets.EC2_INSTANCE_ID }}" \
+                --query "[StandardOutputContent,StandardErrorContent]" \
+                --output text
+
+              exit 1
+            fi
+          done
+
+          echo "Deployment timed out"
+          exit 1

@@ -31,4 +31,4 @@ def test_predict_endpoint_returns_predictions(monkeypatch):
     response = client.post("/predict", json=payload)
 
     assert response.status_code == 200
-    assert response.json() == {"predictions": ["Approved"]}
+    assert response.json() == {"Your loan has been": ["Approved"]}
