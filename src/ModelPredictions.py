@@ -4,6 +4,7 @@ import io
 import os
 import boto3
 import joblib
+import re
 from src.DataPreprocessing import DataLoader
 from constants.constants import MODEL_PATH
 from constants.constants import S3_BUCKET_NAME, S3_MODEL_PREFIX, S3_MODEL_FILENAME
@@ -45,26 +46,50 @@ class ModelPredictions(DataLoader):
             print("💻 [LOCAL MODE] Loading model from MinIO (S3-compatible)...")
             return self._load_model_from_s3()
 
+
     def _get_latest_date_key(self):
-        """Scans your S3 date-subfolders and isolates the newest chronological folder."""
+        """Scans S3 date-style prefixes and returns the latest model path."""
+
         s3_client = self._get_s3_client()
         paginator = s3_client.get_paginator("list_objects_v2")
+
         pages = paginator.paginate(
-            Bucket=self.bucket_name, Prefix=self.prefix, Delimiter="/"
+            Bucket=self.bucket_name,
+            Prefix=self.prefix,
+            Delimiter="/",
         )
 
         date_folders = []
+
+        # strict YYYY-MM-DD folder filter
+        date_pattern = re.compile(r"\d{4}-\d{2}-\d{2}/$")
+
         for page in pages:
             for folder in page.get("CommonPrefixes", []):
-                date_folders.append(folder["Prefix"])
+                prefix = folder.get("Prefix")
+
+                if not prefix:
+                    continue
+
+                # ignore noisy / invalid prefixes
+                if prefix == self.prefix:
+                    continue
+
+                # only keep real date folders
+                if not date_pattern.search(prefix):
+                    continue
+
+                date_folders.append(prefix)
 
         if not date_folders:
             raise FileNotFoundError(
-                f"No date subfolders found under prefix '{self.prefix}' in bucket '{self.bucket_name}'"
+                f"No valid date subfolders found under prefix '{self.prefix}' "
+                f"in bucket '{self.bucket_name}'"
             )
 
-        date_folders.sort()
-        latest_folder = date_folders[-1]
+        # sort chronologically (works because YYYY-MM-DD format is lexicographically sortable)
+        latest_folder = sorted(date_folders)[-1]
+
         return f"{latest_folder}{self.filename}"
 
     def _load_model_from_s3(self):
