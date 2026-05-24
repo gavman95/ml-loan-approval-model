@@ -7,7 +7,7 @@ import joblib
 import re
 from src.DataPreprocessing import DataLoader
 from constants.constants import MODEL_PATH
-from constants.constants import S3_BUCKET_NAME, S3_MODEL_PREFIX, S3_MODEL_FILENAME
+from constants.constants import S3_MODEL_PREFIX, S3_MODEL_FILENAME
 from sklearn.metrics import accuracy_score, confusion_matrix, classification_report
 
 
@@ -25,7 +25,7 @@ class ModelPredictions(DataLoader):
         self.preprocess_data()
 
         # S3 Constant configuration binding
-        self.bucket_name = S3_BUCKET_NAME
+        self.bucket_name = os.getenv("S3_BUCKET_NAME")
         self.prefix = S3_MODEL_PREFIX
         self.filename = S3_MODEL_FILENAME
 
