@@ -91,8 +91,8 @@ jobs:
               \"export AWS_REGION=${AWS_REGION}\",
               \"export S3_BUCKET_NAME=${{ secrets.S3_BUCKET_NAME }}\",
               \"aws ecr get-login-password --region ${AWS_REGION} | docker login --username AWS --password-stdin ${ECR_URI}\",
-              \"docker compose -f docker-compose.prod.yml pull\",
-              \"docker compose -f docker-compose.prod.yml up -d --remove-orphans\"
+              \"docker-compose -f docker-compose.prod.yml pull\",
+              \"docker-compose -f docker-compose.prod.yml up -d --remove-orphans\"
             ]" \
             --query "Command.CommandId" \
             --output text)
