@@ -1,7 +1,5 @@
 ### Test main file
-
 from main import main
-
 
 def test_main_prints_greeting(capsys):
     main()
